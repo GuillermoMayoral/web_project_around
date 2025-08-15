@@ -15,20 +15,86 @@
 
 <body>
     <div class="page">
-        <header class="header">
-            <div class="title">
-                <img src="./images/title.svg" alt="Titulo de la pagina">
-                <hr>
-            </div>
-        </header>
+        <div class="page__size">
+            <header class="header">
+                <div class="header__contentent">
+                    <img class="header__logo" src="./images/title.svg" alt="Titulo de la pagina">
+                    <hr class="header__line">
+                </div>
+            </header>
 
-        <main class="content">
+            <main class="content">
+                <section class="profile">
 
-        </main>
+                    <div class="profile__data">
+                        <img src="./images/profile-photo.JPG" alt="foto de perfil" class="profile__photo">
+                        <div class="profile__text">
+                            <div class="profile__header">
+                                <h2 class="profile__name">Memo Mayoral</h2>
+                                <button class="profile__edit-button" type="button">
+                                    <img class="profile__edit-image" src="./images/button-edit.png"
+                                        alt="editar nombre y descripcion" />
+                                </button>
+                            </div>
+                            <p class="profile__description">Estudiante</p>
+                        </div>
+                    </div>
+                    <button class="profile__button" type="button">
+                        <img class="profile__button-image" src="./images/profile-mas.svg" alt="signo de mas">
+                    </button>
+                </section>
+                <section class="post">
+                    <ul class="post__cards">
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-valle.jpg" alt="Valle de Yosemite">
+                            <div class="post__description">
+                                <h2 class="post__title">Valle de Yosemite</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-lago.png" alt="Lago Louise">
+                            <div class="post__description">
+                                <h2 class="post__title">Lago Louise</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-montalñas.png" alt="Montañas Calvas">
+                            <div class="post__description">
+                                <h2 class="post__title">Montañas Calvas</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-latemar.png" alt="Latemar">
+                            <div class="post__description">
+                                <h2 class="post__title">Latemar</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-vanois.png" alt="Vanois National Park">
+                            <div class="post__description">
+                                <h2 class="post__title">Vanois National Park</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                        <li class="post__card">
+                            <img class="post__images" src="./images/card-lago-di.png" alt="Lago di Braies">
+                            <div class="post__description">
+                                <h2 class="post__title">Lago di Braies</h2>
+                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </main>
 
-        <footer class="footer">
-
-        </footer>
+            <footer class="footer">
+                <p class="footer__text">&copy 2024 Around The U.S.</p>
+            </footer>
+        </div>
     </div>
 </body>
 
