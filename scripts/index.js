@@ -14,12 +14,12 @@ let btnChangeName = document.querySelector(".popup__button");
 
 function openPopUp(e) {
     e.preventDefault();
-    popUpBlock.classList.remove("popup--disabled");
+    popUpBlock.classList.remove("popup_disabled");
 }
 
 function closePopUp(e) {
     e.preventDefault();
-    popUpBlock.classList.add("popup--disabled");
+    popUpBlock.classList.add("popup_disabled");
 }
 
 function editName(e) {
@@ -27,7 +27,6 @@ function editName(e) {
     if (inputName.value == "" || inputDescription.value == "") {
         alert("Un campo esta vacio");
     } else {
-        flag = 0;
         profileName.textContent = inputName.value;
         profileDescription.textContent = inputDescription.value;
         closePopUp(e);

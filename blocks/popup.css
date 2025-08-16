@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.popup--disabled {
+.popup_disabled {
     display: none;
 }
 
