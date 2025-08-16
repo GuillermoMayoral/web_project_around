@@ -1,0 +1,139 @@
+.popup {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup--disabled {
+    display: none;
+}
+
+.popup__close {
+    margin: 78px 0 14px auto;
+    width: 26px;
+}
+
+.popup__close:hover {
+    opacity: 0.6;
+}
+
+.popup__container {
+    background-color: white;
+    max-height: 322px;
+    width: 282px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popup__title {
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 25px 22px 76px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 238px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: black;
+}
+
+.popup__name-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+
+}
+
+.popup__description-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 46px;
+}
+
+.popup__button {
+    height: 46px;
+    margin-bottom: 25px;
+    background-color: black;
+    color: white;
+}
+
+.popup__button:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 544px) {
+    .popup__box {
+        width: 425px;
+    }
+
+    .popup__close {
+        margin: 113px 0 0 auto;
+        width: 33px;
+    }
+
+    .popup__container {
+        max-height: 326px;
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .popup__title {
+        font-size: 21px;
+        margin: 29px 40px 60px;
+    }
+
+    .popup__form {
+        max-width: 258px;
+        margin: 0 40px;
+    }
+
+    .popup__button {
+        height: 48px;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (min-width: 880px) {
+    .popup__box {
+        width: 510px;
+    }
+
+    .popup__close {
+        margin: 147px 0 0 auto;
+        width: 44px;
+    }
+
+    .popup__container {
+        max-height: 326px;
+        width: 430px;
+    }
+
+    .popup__title {
+        font-size: 24px;
+        margin: 34px 36px 54px;
+    }
+
+    .popup__form {
+        max-width: 358px;
+        margin: 0 37px;
+    }
+
+    .popup__description-input {
+        margin-bottom: 48px;
+    }
+
+    .popup__button {
+        height: 50px;
+        margin-bottom: 36.5px;
+    }
+
+}
