@@ -17,7 +17,7 @@
     <div class="page">
         <div class="page__size">
             <header class="header">
-                <div class="header__contentent">
+                <div class="header__content">
                     <img class="header__logo" src="./images/title.svg" alt="Titulo de la pagina">
                     <hr class="header__line">
                 </div>
@@ -60,7 +60,7 @@
                             </div>
                         </li>
                         <li class="post__card">
-                            <img class="post__images" src="./images/card-montañas.jpg" alt="Montañas Calvas">
+                            <img class="post__images" src="./images/card-montanas.jpg" alt="Montañas Calvas">
                             <div class="post__description">
                                 <h2 class="post__title">Montañas Calvas</h2>
                                 <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
@@ -91,11 +91,27 @@
                 </section>
             </main>
 
+            <div class="popup popup--disabled">
+                <div class="popup__box">
+                    <img class="popup__close" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
+                    <div class="popup__container">
+                        <h2 class="popup__title">Editar perfil</h2>
+                        <form action="" class="popup__form">
+                            <input type="text" class="popup__name-input" placeholder="Nombre">
+                            <input type="text" class="popup__description-input" placeholder="Acerca de mi">
+                            <button class="popup__button" type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <footer class="footer">
                 <p class="footer__text">&copy 2024 Around The U.S.</p>
             </footer>
         </div>
     </div>
+    <script src="./js/popup.js"></script>
+    <script src="./js/active-buttons.js"></script>
 </body>
 
 </html>

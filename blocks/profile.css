@@ -30,15 +30,21 @@
 .profile__name {
     font-size: 22px;
     font-weight: 500;
+    max-width: 230px;
 }
 
 .profile__edit-image {
     width: 18px;
 }
 
+.profile__edit-image:hover {
+    opacity: 0.6;
+}
+
 .profile__description {
     font-size: 14px;
     margin-top: 14px;
+    max-width: 230px;
 }
 
 .profile__button {
@@ -46,6 +52,10 @@
     border: 1px solid white;
     width: 282px;
     height: 50px;
+}
+
+.profile__button:hover {
+    opacity: 0.6;
 }
 
 .profile__button-image {
@@ -84,11 +94,13 @@
     .profile__name {
         font-size: 32px;
         text-align: start;
+        max-width: 220px;
     }
 
     .profile__description {
         font-size: 18px;
         margin-top: 16px;
+        max-width: 220px;
     }
 
     .profile__button {
@@ -108,6 +120,11 @@
 
     .profile__name {
         font-size: 42px;
+        max-width: 500px;
+    }
+
+    .profile__description {
+        max-width: 500px;
     }
 
     .profile__button {
