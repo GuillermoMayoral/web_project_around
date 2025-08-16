@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.post__image {
+.post__images {
     aspect-ratio: 1 / 1
 }
 
@@ -32,6 +32,14 @@
 .post__icon {
     width: 21px;
     height: 19px;
+}
+
+.post__icon:hover {
+    opacity: 0.6;
+}
+
+.post__icon--active {
+    background-image: url(../images/heart-icon-active.svg);
 }
 
 @media (min-width: 544px) {

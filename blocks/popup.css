@@ -10,13 +10,17 @@
     align-items: center;
 }
 
-.popup_opened {
+.popup--disabled {
     display: none;
 }
 
 .popup__close {
     margin: 78px 0 14px auto;
     width: 26px;
+}
+
+.popup__close:hover {
+    opacity: 0.6;
 }
 
 .popup__container {
@@ -59,6 +63,10 @@
     margin-bottom: 25px;
     background-color: black;
     color: white;
+}
+
+.popup__button:hover {
+    opacity: 0.6;
 }
 
 @media (min-width: 544px) {
