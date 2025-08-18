@@ -22,21 +22,26 @@ function closePopUp(e) {
     popUpBlock.classList.add("popup_disabled");
 }
 
-function editName(e) {
+function buttonDisabled(e) {
     e.preventDefault();
-    if (inputName.value == "" || inputDescription.value == "") {
-        alert("Un campo esta vacio");
+    if (inputName.value != "" && inputDescription.value != "") {
+        btnChangeName.disabled = false;
     } else {
-        profileName.textContent = inputName.value;
-        profileDescription.textContent = inputDescription.value;
-        closePopUp(e);
+        btnChangeName.disabled = true;
     }
+}
+
+function changeName(e) {
+    profileName.textContent = inputName.value;
+    profileDescription.textContent = inputDescription.value;
+    closePopUp(e);
 }
 
 btneEditButton.addEventListener("click", openPopUp);
 btnClosePopUp.addEventListener("click", closePopUp);
-btnChangeName.addEventListener("click", editName);
-
+btnChangeName.addEventListener("click", changeName);
+inputName.addEventListener("input", buttonDisabled);
+inputDescription.addEventListener("input", buttonDisabled);
 
 //JavaScript para ActiveButtons
 
