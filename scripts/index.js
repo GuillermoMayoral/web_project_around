@@ -1,16 +1,18 @@
 //JavaScript para popUp
 
 //llamar popup
-let btneEditButton = document.querySelector(".profile__edit-button");
-let popUpBlock = document.querySelector(".popup");
+const btneEditButton = document.querySelector(".profile__edit-button");
+const popUpBlock = document.querySelector(".popup");
 //cerrar popup
-let btnClosePopUp = document.querySelector(".popup__close");
+const btnClosePopUp = document.querySelector(".popup__close");
 //cambiar nombre y descripcion
-let profileName = document.querySelector(".profile__name");
-let profileDescription = document.querySelector(".profile__description");
-let inputName = document.querySelector(".popup__name-input");
-let inputDescription = document.querySelector(".popup__description-input");
-let btnChangeName = document.querySelector(".popup__button");
+const profileName = document.querySelector(".profile__name");
+const profileDescription = document.querySelector(".profile__description");
+const inputName = document.querySelector(".popup__name-input");
+const inputDescription = document.querySelector(".popup__description-input");
+const btnChangeName = document.querySelector(".popup__button");
+//llamar contenedor cards
+const cardContainer = document.querySelector(".post__cards");
 
 function openPopUp(e) {
     e.preventDefault();
@@ -43,16 +45,55 @@ btnChangeName.addEventListener("click", changeName);
 inputName.addEventListener("input", buttonDisabled);
 inputDescription.addEventListener("input", buttonDisabled);
 
-//JavaScript para ActiveButtons
+const initialCards = [
+    {
+        name: "Valle de Yosemite",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
+    },
+    {
+        name: "Lago Louise",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
+    },
+    {
+        name: "Montañas Calvas",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg"
+    },
+    {
+        name: "Latemar",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg"
+    },
+    {
+        name: "Parque Nacional de la Vanoise",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg"
+    },
+    {
+        name: "Lago di Braies",
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
+    }
+];
 
-let heartButtons = document.querySelectorAll('.post__icon');
 
-function toggleHeart(e) {
-    e.preventDefault();
-    e.currentTarget.classList.toggle("post__icon--active");
+
+function startCards(name, link) {
+    const cardTemplate = document.querySelector("#cards").content;
+    const cardElemnt = cardTemplate.querySelector(".post__card").cloneNode(true);
+
+    cardElemnt.querySelector(".post__title").textContent = name;
+    cardElemnt.querySelector(".post__images").src = link;
+    cardElemnt.querySelector(".post__images").alt = name;
+
+
+    cardContainer.append(cardElemnt);
 }
 
-// Asigna la función a cada botón
-heartButtons.forEach(button => {
-    button.addEventListener('click', toggleHeart);
+initialCards.forEach(item => {
+    startCards(item.name, item.link)
+})
+
+//agrega funcion de like a las nuevas cards
+cardContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("post__icon")) {
+        e.target.classList.toggle("post__icon--active");
+    }
 });
+
