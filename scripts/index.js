@@ -22,6 +22,11 @@ const inputLink = popUpCard.querySelector(".popup__description-input");
 const btnPushCard = popUpCard.querySelector(".popup__button");
 //llamar contenedor cards
 const cardContainer = document.querySelector(".post__cards");
+//llamar trash icon
+const trashIcon = document.querySelector(".post__trash");
+//cerrar bigImage
+const blockImage = document.querySelector(".big-image");
+const closeImage = document.querySelector(".big-image__close");
 
 //abrir popup editar perfil
 function openPopUp(e) {
@@ -140,5 +145,31 @@ cardContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("post__icon")) {
         e.target.classList.toggle("post__icon--active");
     }
+
+    //funcion borrar card
+    if (e.target.classList.contains("post__trash")) {
+        const cardToDelete = e.target.closest(".post__card");
+        cardToDelete.remove();
+    }
+
+    //abrir imagen
+    if (e.target.classList.contains("post__images")) {
+        const openImage = e.target.closest(".post__images");
+        const bigImage = openImage.src;
+        const textImage = openImage.alt;
+
+
+        const newImage = blockImage.querySelector(".big-image__image");
+        const newText = blockImage.querySelector(".big-image__text");
+
+        blockImage.classList.remove("big-image_disabled");
+        newImage.src = bigImage;
+        newText.textContent = textImage;
+    }
 });
 
+//abrir imagen grande
+
+closeImage.addEventListener("click", () => {
+    blockImage.classList.add("big-image_disabled");
+})
