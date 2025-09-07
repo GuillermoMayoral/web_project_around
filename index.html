@@ -45,48 +45,7 @@
                 </section>
                 <section class="post">
                     <ul class="post__cards">
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-valle.jpg" alt="Valle de Yosemite">
-                            <div class="post__description">
-                                <h2 class="post__title">Valle de Yosemite</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-lago.png" alt="Lago Louise">
-                            <div class="post__description">
-                                <h2 class="post__title">Lago Louise</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-montanas.jpg" alt="Montañas Calvas">
-                            <div class="post__description">
-                                <h2 class="post__title">Montañas Calvas</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-latemar.png" alt="Latemar">
-                            <div class="post__description">
-                                <h2 class="post__title">Latemar</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-vanois.png" alt="Vanois National Park">
-                            <div class="post__description">
-                                <h2 class="post__title">Vanois National Park</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
-                        <li class="post__card">
-                            <img class="post__images" src="./images/card-lago-di.png" alt="Lago di Braies">
-                            <div class="post__description">
-                                <h2 class="post__title">Lago di Braies</h2>
-                                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
-                            </div>
-                        </li>
+
                     </ul>
                 </section>
             </main>
@@ -104,12 +63,45 @@
                     </div>
                 </div>
             </div>
+            <div class="popup-add-card popup_disabledCard">
+                <div class="popup__box">
+                    <img class="popup__close-add-card" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
+                    <div class="popup__container">
+                        <h2 class="popup__title">Nuevo lugar</h2>
+                        <form class="popup__form">
+                            <input type="text" class="popup__name-input" placeholder="Titulo">
+                            <input type="text" class="popup__description-input" placeholder="Enlace de la imagen">
+                            <button class="popup__button" type="submit" disabled>Crear</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="big-image big-image_disabled">
+                <div class="big-image__box">
+                    <img class="big-image__close" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
+                    <img class="big-image__image" src="" alt="">
+                    <p class="big-image__text"></p>
+                </div>
+            </div>
 
             <footer class="footer">
                 <p class="footer__text">&copy; 2024 Around The U.S.</p>
             </footer>
         </div>
     </div>
+    <template id="cards">
+        <li class="post__card">
+            <div class="post__trash-container">
+                <img src="./images/Trash.svg" alt="icono basura" class="post__trash">
+            </div>
+            <img class="post__images" src="" alt="">
+            <div class="post__description">
+                <h2 class="post__title">Valle de Yosemite</h2>
+                <img src="./images/heart-icon.svg" alt="logo me gusta" class="post__icon">
+            </div>
+        </li>
+    </template>
+
     <script src="./scripts/index.js"></script>
 </body>
 

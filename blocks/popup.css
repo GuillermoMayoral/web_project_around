@@ -1,4 +1,5 @@
-.popup {
+.popup,
+.popup-add-card {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -14,12 +15,21 @@
     display: none;
 }
 
-.popup__close {
+.popup_disabledCard {
+    display: none;
+}
+
+.popup__close,
+.popup__close-add-card {
     margin: 78px 0 14px auto;
     width: 26px;
 }
 
 .popup__close:hover {
+    opacity: 0.6;
+}
+
+.popup__close-add-card:hover {
     opacity: 0.6;
 }
 
@@ -83,7 +93,8 @@
         width: 425px;
     }
 
-    .popup__close {
+    .popup__close,
+    .popup__close-add-card {
         margin: 113px 0 0 auto;
         width: 33px;
     }
@@ -116,7 +127,8 @@
         width: 510px;
     }
 
-    .popup__close {
+    .popup__close,
+    .popup__close-add-card {
         margin: 147px 0 0 auto;
         width: 44px;
     }
