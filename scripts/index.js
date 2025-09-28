@@ -39,14 +39,11 @@ function closePopUp(e) {
     popUpBlock.classList.add("popup_disabled");
 }
 
-function buttonDisabled(e) {
-    e.preventDefault();
-    if (inputName.value != "" && inputDescription.value != "") {
-        btnChangeName.disabled = false;
-    } else {
-        btnChangeName.disabled = true;
+popUpBlock.addEventListener('mousedown', (e) => {
+    if (e.target === popUpBlock) {
+        closePopUp(e);
     }
-}
+});
 
 function changeName(e) {
     profileName.textContent = inputName.value;
@@ -65,35 +62,37 @@ function closePopUpCard(e) {
     popUpCard.classList.add("popup_disabledCard");
 }
 
-function buttonCardDisabled(e) {
-    e.preventDefault();
-    if (inputTitle.value != "" && inputLink.value != "") {
-        btnPushCard.disabled = false;
-    } else {
-        btnPushCard.disabled = true;
+popUpCard.addEventListener('mousedown', (e) => {
+    if (e.target === popUpCard) {
+        closePopUpCard(e);
     }
-}
+});
 
 function pushCard(e) {
     startCards(inputTitle.value, inputLink.value)
     closePopUpCard(e);
 }
 
-
+//cerrar con esq
+document.addEventListener('keydown', (event) => {
+    // Verificamos si la tecla presionada fue "Escape"
+    if (event.key === 'Escape' && !popUpCard.classList.contains('popup_disabledCard')) {
+        popUpCard.classList.add("popup_disabledCard");
+    } else if (event.key === 'Escape' && !popUpBlock.classList.contains('popup_disabled')) {
+        popUpBlock.classList.add("popup_disabled");
+    }
+});
 
 btnEditButton.addEventListener("click", openPopUp);
 btnClosePopUp.addEventListener("click", closePopUp);
 
 btnChangeName.addEventListener("click", changeName);
-inputName.addEventListener("input", buttonDisabled);
-inputDescription.addEventListener("input", buttonDisabled);
 
 btnAddCard.addEventListener("click", openPopUpCard);
 btnClosePopUpCard.addEventListener("click", closePopUpCard);
 
 btnPushCard.addEventListener("click", pushCard);
-inputTitle.addEventListener("input", buttonCardDisabled);
-inputLink.addEventListener("input", buttonCardDisabled);
+
 
 const initialCards = [
     {
@@ -173,3 +172,12 @@ cardContainer.addEventListener("click", (e) => {
 closeImage.addEventListener("click", () => {
     blockImage.classList.add("big-image_disabled");
 })
+
+enableValidation({
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__button",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible"
+});
