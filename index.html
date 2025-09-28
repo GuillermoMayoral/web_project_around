@@ -55,27 +55,39 @@
                     <img class="popup__close" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
                     <div class="popup__container">
                         <h2 class="popup__title">Editar perfil</h2>
-                        <form class="popup__form">
-                            <input type="text" class="popup__name-input" placeholder="Nombre">
-                            <input type="text" class="popup__description-input" placeholder="Acerca de mi">
-                            <button class="popup__button" type="submit" disabled>Guardar</button>
+                        <form class="popup__form" novalidate>
+                            <input id="name-input" type="text" class="popup__name-input popup__input"
+                                placeholder="Nombre" required minlength="2" maxlength="40">
+                            <span class="popup__error name-input-error"></span>
+
+                            <input id="about-input" type="text" class="popup__description-input popup__input"
+                                placeholder="Acerca de mi" required minlength="2" maxlength="200">
+                            <span class="popup__error about-input-error"></span>
+
+                            <button class="popup__button" type="submit">Guardar</button>
                         </form>
                     </div>
                 </div>
             </div>
+
             <div class="popup-add-card popup_disabledCard">
                 <div class="popup__box">
                     <img class="popup__close-add-card" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
                     <div class="popup__container">
                         <h2 class="popup__title">Nuevo lugar</h2>
-                        <form class="popup__form">
-                            <input type="text" class="popup__name-input" placeholder="Titulo">
-                            <input type="text" class="popup__description-input" placeholder="Enlace de la imagen">
-                            <button class="popup__button" type="submit" disabled>Crear</button>
+                        <form class="popup__form" novalidate>
+                            <input id="title-input" type="text" name="name" class="popup__name-input popup__input"
+                                placeholder="Titulo" required minlength="2" maxlength="30">
+                            <span class="popup__error title-input-error"></span>
+                            <input id="link-input" type="url" name="link" class="popup__description-input popup__input"
+                                placeholder="Enlace de la imagen" required>
+                            <span class="popup__error link-input-error"></span>
+                            <button class="popup__button" type="submit">Crear</button>
                         </form>
                     </div>
                 </div>
             </div>
+
             <div class="big-image big-image_disabled">
                 <div class="big-image__box">
                     <img class="big-image__close" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
@@ -101,7 +113,7 @@
             </div>
         </li>
     </template>
-
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 
