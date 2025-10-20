@@ -39,6 +39,7 @@
     color: black;
     font-size: 24px;
     font-weight: 900;
+    max-width: 220px;
 }
 
 .post__description {
@@ -50,14 +51,17 @@
 .post__icon {
     width: 21px;
     height: 19px;
+    background-image: url(../images/heart-icon.svg);
 }
 
 .post__icon:hover {
     opacity: 0.6;
 }
 
-.post__icon--active {
+.post__icon-active {
     background-image: url(../images/heart-icon-active.svg);
+    width: 21px;
+    height: 19px;
 }
 
 @media (min-width: 544px) {
