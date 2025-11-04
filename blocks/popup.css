@@ -9,24 +9,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 
-.popup_disabled {
-    display: none;
+.popup_opened {
+    display: flex;
 }
 
 .popup__button_disabled {
     background-color: #E5E5E5;
-    /* O el color gris de tu diseño */
     color: #000000;
     opacity: 0.2;
     pointer-events: none;
-    /* Evita que se pueda hacer clic */
 }
 
-.popup_disabledCard {
-    display: none;
-}
+
 
 .popup__close,
 .popup__close-add-card {

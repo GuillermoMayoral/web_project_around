@@ -8,10 +8,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 
-.big-image_disabled {
-    display: none;
+.popup_opened {
+    display: flex;
 }
 
 .big-image__box {
