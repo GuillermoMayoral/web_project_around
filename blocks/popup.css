@@ -1,5 +1,6 @@
 .popup,
-.popup-add-card {
+.popup-add-card,
+.popup-confirm-delete {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -23,10 +24,9 @@
     pointer-events: none;
 }
 
-
-
 .popup__close,
-.popup__close-add-card {
+.popup__close-add-card,
+.popup__close-confirm {
     margin: 78px 0 14px auto;
     width: 26px;
 }
@@ -47,11 +47,26 @@
     overflow: hidden;
 }
 
+.popup__container_type_confirm {
+    background-color: white;
+    max-height: 165px;
+    width: 282px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .popup__title {
     color: black;
     font-size: 18px;
     font-weight: 900;
     margin: 25px 22px 76px;
+}
+
+.popup__title_type_confirm {
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 25px 22px 0;
 }
 
 .popup__form {
@@ -78,6 +93,14 @@
     height: 46px;
     margin-bottom: 25px;
     margin-top: 46px;
+    background-color: black;
+    color: white;
+}
+
+.popup__button_type_confirm {
+    height: 46px;
+    margin-bottom: 31px;
+    margin-top: 33px;
     background-color: black;
     color: white;
 }
@@ -117,7 +140,8 @@
     }
 
     .popup__close,
-    .popup__close-add-card {
+    .popup__close-add-card,
+    .popup__close-confirm {
         margin: 113px 0 0 auto;
         width: 33px;
     }
@@ -128,19 +152,37 @@
         margin: 0 auto;
     }
 
+    .popup__container_type_confirm {
+        max-height: 171px;
+        width: 360px;
+        margin: 0 auto;
+    }
+
     .popup__title {
         font-size: 21px;
         margin: 29px 40px 60px;
     }
 
+    .popup__title_type_confirm {
+        font-size: 21px;
+        margin: 29px 40px 0;
+    }
+
     .popup__form {
         max-width: 258px;
-        margin: 0 40px;
+        margin: 0 auto;
     }
 
     .popup__button {
         height: 48px;
         margin-bottom: 30px;
+    }
+
+    .popup__button_type_confirm {
+        height: 48px;
+        margin-bottom: 34px;
+        margin-top: 36px;
+
     }
 
 }
@@ -151,7 +193,8 @@
     }
 
     .popup__close,
-    .popup__close-add-card {
+    .popup__close-add-card,
+    .popup__close-confirm {
         margin: 147px 0 0 auto;
         width: 44px;
     }
@@ -161,9 +204,19 @@
         width: 430px;
     }
 
+    .popup__container_type_confirm {
+        max-height: 181px;
+        width: 430px;
+    }
+
     .popup__title {
         font-size: 24px;
         margin: 34px 36px 54px;
+    }
+
+    .popup__title_type_confirm {
+        font-size: 24px;
+        margin: 34px 36px 0;
     }
 
     .popup__form {
@@ -174,6 +227,12 @@
     .popup__button {
         height: 50px;
         margin-bottom: 36.5px;
+    }
+
+    .popup__button_type_confirm {
+        height: 50px;
+        margin-bottom: 36px;
+        margin-top: 38px;
     }
 
 }
