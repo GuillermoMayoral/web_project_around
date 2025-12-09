@@ -21,6 +21,7 @@ export const validationConfig = {
 // Selectores
 export const profilePopupSelector = ".popup";
 export const addCardPopupSelector = ".popup-add-card";
+export const confirmPopupDelete = ".popup-confirm-delete";
 export const imagePopupSelector = ".big-image";
 export const cardContainerSelector = ".post__cards";
 export const cardTemplateSelector = "#cards";

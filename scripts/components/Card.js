@@ -1,9 +1,11 @@
 export default class Card {
-    constructor(data, cardSelector, handleImageClick) {
+    constructor(data, cardSelector, handleImageClick, handleDeleteClick) {
         this._name = data.name;
         this._link = data.link;
+        this._id = data._id;
         this._cardSelector = cardSelector;
         this._handleImageClick = handleImageClick;
+        this._handleDeleteCard = handleDeleteClick;
     }
 
     _getTemplate() {
@@ -22,7 +24,11 @@ export default class Card {
     }
 
     _handleDeleteClick() {
-        //funcion borrar
+        //funcion borrar   
+        this._handleDeleteCard(this._id);
+    }
+
+    delete() {
         this._element.remove();
     }
 
