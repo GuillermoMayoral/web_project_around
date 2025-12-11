@@ -11,6 +11,13 @@
     width: 90%;
     max-width: 880px;
     min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page>.footer:last-child {
+    background-color: red;
 }
 
 @media (min-width: 544px) {

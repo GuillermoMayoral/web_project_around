@@ -20,13 +20,20 @@ import {
     cardTemplateSelector,
     profileNameSelector,
     profileJobSelector,
+    avatarPopup,
     btnEditProfile,
     btnAddCard,
     formProfile,
     formAddCard,
+    formAvatar,
     inputName,
-    inputDescription
+    inputDescription,
+    editProfile,
+    editProfileImage
 } from './utils/Constants.js';
+
+//declarado de ID usuario
+let userId
 
 // 1. UserInfo
 const userInfo = new UserInfo({
@@ -55,7 +62,21 @@ function createCard(item) {
                 .catch((err) => console.log(err))
         })
         confirmPopup.open();
-    });
+    }, (cardID, isLiked) => {
+        if (isLiked) {
+            api.disLikeCard(cardID)
+                .then(() => {
+                    card.processLike();
+                })
+                .catch((err) => console.log(err));
+        } else {
+            api.likeCard(cardID)
+                .then(() => {
+                    card.processLike();
+                })
+                .catch((err) => console.log(err));
+        }
+    }, userId);
     return card.generateCard();
 }
 
@@ -108,6 +129,9 @@ profileFormValidator.enableValidation();
 const addCardFormValidator = new FormValidator(validationConfig, formAddCard);
 addCardFormValidator.enableValidation();
 
+const addAvatarFormValidator = new FormValidator(validationConfig, formAvatar);
+addAvatarFormValidator.enableValidation();
+
 // Event Listeners para Abrir Popups
 
 btnEditProfile.addEventListener("click", () => {
@@ -138,9 +162,12 @@ const api = new Api({
 
 api.getAppInfo()
     .then(([userData, cardsData]) => {
+        userId = userData._id
 
-        userInfo.setUserInfo(userData.name, userData.about);
 
+        userInfo.setUserInfo(userData.name, userData.about, userData.avatar);
+        // foto perfil
+        editProfileImage.src = userData.avatar;
         // 4.2. Sección de insertado de Tarjetas (insertamos cards)
         cardList = new Section({
             items: cardsData,
@@ -154,3 +181,26 @@ api.getAppInfo()
     })
     .catch((err) => console.log(err));
 
+// Editar foto de perfil
+
+const avatarEdit = new PopupWithForm(avatarPopup, (formData) => {
+    avatarEdit.renderLoading(true);
+
+    api.updateAvatar(formData.link)
+        .then((data) => {
+            editProfileImage.src = data.avatar;
+            avatarEdit.close();
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+        .finally(() => {
+            avatarEdit.renderLoading(false);
+        })
+})
+avatarEdit.setEventListeners();
+
+editProfile.addEventListener("click", () => {
+    addAvatarFormValidator.resetValidation();
+    avatarEdit.open();
+});

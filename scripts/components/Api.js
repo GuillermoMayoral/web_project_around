@@ -32,7 +32,7 @@ export default class Api {
             headers: this._headers,
             body: JSON.stringify({
                 name: name,
-                about: about
+                about: about,
             })
         })
             .then((res) => {
@@ -82,7 +82,7 @@ export default class Api {
             })
     }
 
-    dislikeCard(cardId) {
+    disLikeCard(cardId) {
         return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
             method: "DELETE",
             headers: this._headers

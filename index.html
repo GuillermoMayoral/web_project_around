@@ -27,7 +27,9 @@
                 <section class="profile">
 
                     <div class="profile__data">
-                        <img src="./images/profile-photo.JPG" alt="foto de perfil" class="profile__photo">
+                        <div class="profile__photo-container">
+                            <img src="./images/placeholder-usuario.png" alt="foto de perfil" class="profile__photo">
+                        </div>
                         <div class="profile__text">
                             <div class="profile__header">
                                 <h2 class="profile__name">Memo Mayoral</h2>
@@ -84,6 +86,22 @@
                                 placeholder="Enlace de la imagen" required>
                             <span class="popup__error link-input-error"></span>
                             <button class="popup__button" type="submit">Crear</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-avatar">
+                <div class="popup__box">
+                    <img class="popup__close-add-card" src="./images/popup-close-Icon.svg" alt="icono de cerrado X">
+                    <div class="popup__container_avatar">
+                        <h2 class="popup__title popup__title-avatar">Cambiar foto de perfil</h2>
+                        <form class="popup__form" novalidate>
+                            <input id="link-input-avatar" type="url" name="link"
+                                class="popup__description-input popup__input popup__input-avatar"
+                                placeholder="Enlace de la imagen" required>
+                            <span class="popup__error link-input-avatar-error"></span>
+                            <button class="popup__button" type="submit">Guardar</button>
                         </form>
                     </div>
                 </div>
