@@ -56,6 +56,7 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 
 ## Estructura de Archivos
 
+```txt
 .
 ├── blocks
 │ ├── big-image.css
@@ -131,6 +132,7 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 ├── index.html
 ├── package-lock.json
 └── package.json
+```
 
 ## Guía de Instalación y Ejecución
 
