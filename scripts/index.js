@@ -32,6 +32,9 @@ import {
     editProfileImage
 } from './utils/Constants.js';
 
+//declarado de ID usuario
+let userId
+
 // 1. UserInfo
 const userInfo = new UserInfo({
     nameSelector: profileNameSelector,
@@ -59,7 +62,21 @@ function createCard(item) {
                 .catch((err) => console.log(err))
         })
         confirmPopup.open();
-    });
+    }, (cardID, isLiked) => {
+        if (isLiked) {
+            api.disLikeCard(cardID)
+                .then(() => {
+                    card.processLike();
+                })
+                .catch((err) => console.log(err));
+        } else {
+            api.likeCard(cardID)
+                .then(() => {
+                    card.processLike();
+                })
+                .catch((err) => console.log(err));
+        }
+    }, userId);
     return card.generateCard();
 }
 
@@ -145,6 +162,8 @@ const api = new Api({
 
 api.getAppInfo()
     .then(([userData, cardsData]) => {
+        userId = userData._id
+
 
         userInfo.setUserInfo(userData.name, userData.about, userData.avatar);
         // foto perfil
