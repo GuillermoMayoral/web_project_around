@@ -56,7 +56,8 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 
 ## Estructura de Archivos
 
-├── blocks/ # Estilos organizados por bloques BEM (CSS modular)
+.
+├── blocks
 │ ├── big-image.css
 │ ├── content.css
 │ ├── footer.css
@@ -67,20 +68,19 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 │ ├── post.css
 │ └── profile.css
 │
-├── docs/ # Archivos para el Read.me
-│ ├── gifs/
-│ │ └── editar-perfil.gif
+├── docs
+│ ├── gifs
+│ │ ├── editar-perfil.gif
 │ │ └── funcion-card.gif
-│ ├── images/
+│ └── images
 │ └── views.png
 │
-│
-├── fonts/ # Tipografías locales usadas en la interfaz
+├── fonts
 │ ├── Inter-Black.woff2
 │ ├── Inter-Medium.woff2
 │ └── Inter-Regular.woff2
 │
-├── images/ # Recursos gráficos (icons, placeholders, imágenes de tarjetas)
+├── images
 │ ├── Trash.svg
 │ ├── button-edit.png
 │ ├── card-lago-di.png
@@ -97,39 +97,40 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 │ ├── profile-mas.svg
 │ └── title.svg
 │
-├── node_modules/ # Dependencias instaladas por npm
+├── node_modules
 │
-├── pages/
-│ └── index.css # Estilos principales compilados o importados desde bloques
+├── pages
+│ └── index.css
 │
-├── scripts/ # Lógica del proyecto estructurada modularmente
-│ ├── components/ # Clases basadas en POO
-│ │ ├── Api.js # Comunicación con el servidor (GET/POST/DELETE/PATCH)
-│ │ ├── Card.js # Lógica interna de cada tarjeta (likes, delete, eventos)
-│ │ ├── FormValidator.js # Validación de formularios reutilizable
-│ │ ├── Popup.js # Clase padre para ventanas emergentes
-│ │ ├── PopupWithConfirmation.js # Popup para eliminar tarjetas
-│ │ ├── PopupWithForm.js # Popup para formularios (editar perfil, nueva tarjeta)
-│ │ ├── PopupWithImage.js # Popup para ver imágenes en tamaño grande
-│ │ ├── Section.js # Renderizado dinámico de listas de elementos
-│ │ └── UserInfo.js # Manejo de la info del usuario (nombre, bio, avatar)
+├── scripts
+│ ├── components
+│ │ ├── Api.js
+│ │ ├── Card.js
+│ │ ├── FormValidator.js
+│ │ ├── Popup.js
+│ │ ├── PopupWithConfirmation.js
+│ │ ├── PopupWithForm.js
+│ │ ├── PopupWithImage.js
+│ │ ├── Section.js
+│ │ └── UserInfo.js
 │ │
-│ ├── utils/
-│ │ └── Constants.js # Selectores, listas y configuraciones reutilizables
-│ └── index.js # Punto de entrada para configuración adicional
+│ ├── utils
+│ │ └── Constants.js
+│ │
+│ └── index.js
 │
-├── vendor/ # Estilos externos o de terceros
+├── vendor
 │ ├── fonts.css
-│ └── normalize.css # Reseteo CSS para estandarizar estilos
+│ └── normalize.css
 │
-├── .editorconfig # Configuración de formato entre editores
-├── .gitignore # Archivos/carpetas ignoradas en Git
-├── .prettierignore # Archivos ignorados por Prettier
-├── README.md # Documentación del proyecto
-├── favicon.ico # Icono del sitio
-├── index.html # HTML principal de la aplicación
-├── package-lock.json # Versión fija de dependencias
-└── package.json # Configuración del proyecto y dependencias npm
+├── .editorconfig
+├── .gitignore
+├── .prettierignore
+├── README.md
+├── favicon.ico
+├── index.html
+├── package-lock.json
+└── package.json
 
 ## Guía de Instalación y Ejecución
 
@@ -147,14 +148,14 @@ El proyecto sigue una estructura orientada a objetos para mantener un código li
 
 ### 📸 Captura de vista en tres dispositivos
 
-> ![Vista principal en distintos dispositivos](./docs/images/views.png) > <img src="./docs/images/views.png" width="350">
+> ![Vista principal en distintos dispositivos](./docs/images/views.png)
 
 ### 📝 Gif del formulario de edición del perfil (Editar foto, nombre y descripcion)
 
-> ![Gif de como funciona la edicion de perfil](./docs/gifs/editar-perfil.gif) > <img src="./docs/gifs/editar-perfil.gif" width="350">
+> ![Gif de como funciona la edicion de perfil](./docs/gifs/editar-perfil.gif)
 
 ### 🖼️ Funcion de las cards (Creacion, like y borrado)
 
-> ![Gif de como funciona la cracion y manejo de cards](./docs/gifs/funcion-card.gif) > <img src="./docs/gifs/funcion-card.gif" width="350">
+> ![Gif de como funciona la cracion y manejo de cards](./docs/gifs/funcion-card.gif)
 
 © 2025 Guillermo Mayoral Mora. Proyecto realizado para el Bootcamp de Desarrollo Web de TripleTen.
