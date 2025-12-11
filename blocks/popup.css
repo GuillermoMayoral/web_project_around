@@ -1,6 +1,7 @@
 .popup,
 .popup-add-card,
-.popup-confirm-delete {
+.popup-confirm-delete,
+.popup-avatar {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -55,11 +56,23 @@
     overflow: hidden;
 }
 
+.popup__container_avatar {
+    background-color: white;
+    max-height: 257px;
+    width: 282px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .popup__title {
     color: black;
     font-size: 18px;
     font-weight: 900;
     margin: 25px 22px 76px;
+}
+
+.popup__title-avatar {
+    margin-bottom: 49px;
 }
 
 .popup__title_type_confirm {
@@ -122,6 +135,10 @@
     border-bottom: 1px solid #FF0000;
 }
 
+.popup__input-avatar {
+    margin-top: 0;
+}
+
 .popup__error {
     color: #FF0000;
     font-size: 12px;
@@ -154,6 +171,12 @@
 
     .popup__container_type_confirm {
         max-height: 171px;
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .popup__container_avatar {
+        max-height: 262px;
         width: 360px;
         margin: 0 auto;
     }
@@ -233,6 +256,11 @@
         height: 50px;
         margin-bottom: 36px;
         margin-top: 38px;
+    }
+
+    .popup__container_avatar {
+        max-height: 272px;
+        width: 430px;
     }
 
 }

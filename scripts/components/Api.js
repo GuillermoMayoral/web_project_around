@@ -32,7 +32,8 @@ export default class Api {
             headers: this._headers,
             body: JSON.stringify({
                 name: name,
-                about: about
+                about: about,
+                avatar: avatarLink
             })
         })
             .then((res) => {
