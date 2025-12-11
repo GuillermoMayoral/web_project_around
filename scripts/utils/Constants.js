@@ -21,11 +21,13 @@ export const validationConfig = {
 // Selectores
 export const profilePopupSelector = ".popup";
 export const addCardPopupSelector = ".popup-add-card";
+export const confirmPopupDelete = ".popup-confirm-delete";
 export const imagePopupSelector = ".big-image";
 export const cardContainerSelector = ".post__cards";
 export const cardTemplateSelector = "#cards";
 export const profileNameSelector = ".profile__name";
 export const profileJobSelector = ".profile__description";
+export const avatarPopup = ".popup-avatar"
 
 // Elementos
 export const btnEditProfile = document.querySelector(".profile__edit-button");
@@ -34,7 +36,14 @@ export const btnAddCard = document.querySelector(".profile__button");
 // Formularios
 export const formProfile = document.querySelector(profilePopupSelector).querySelector(".popup__form");
 export const formAddCard = document.querySelector(addCardPopupSelector).querySelector(".popup__form");
+export const formAvatar = document.querySelector(avatarPopup).querySelector(".popup__form");
 
 // Inputs del formulario de perfil (para leer datos al abrir)
 export const inputName = formProfile.querySelector(".popup__name-input");
 export const inputDescription = formProfile.querySelector(".popup__description-input");
+
+// Editar perfil
+export const editProfile = document.querySelector(".profile__photo-container");
+export const editProfileImage = document.querySelector(".profile__photo");
+
+
